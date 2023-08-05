@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A817BB2A2A7EC26D006F33BD /* Health_Tracking_2023App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817BB292A7EC26D006F33BD /* Health_Tracking_2023App.swift */; };
+		A817BB2E2A7EC26E006F33BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A817BB2D2A7EC26E006F33BD /* Assets.xcassets */; };
+		A817BB312A7EC26E006F33BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A817BB302A7EC26E006F33BD /* Preview Assets.xcassets */; };
+		A817BB3F2A7EE2BF006F33BD /* Welcome1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817BB3E2A7EE2BF006F33BD /* Welcome1.swift */; };
+		A817BB422A7EE2E9006F33BD /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817BB412A7EE2E9006F33BD /* Colors.swift */; };
+		A817BBB42A7EEE59006F33BD /* OpenSans_Condensed-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BBA12A7EEE10006F33BD /* OpenSans_Condensed-ExtraBold.ttf */; };
+		A817BBB52A7EEE5D006F33BD /* OpenSans_Condensed-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BB932A7EEE10006F33BD /* OpenSans_Condensed-BoldItalic.ttf */; };
+		A817BBB62A7EEE60006F33BD /* OpenSans_Condensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BBA32A7EEE10006F33BD /* OpenSans_Condensed-Bold.ttf */; };
+		A817BBB72A7EEE63006F33BD /* OpenSans_Condensed-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BB942A7EEE10006F33BD /* OpenSans_Condensed-ExtraBoldItalic.ttf */; };
+		A817BBB82A7EEE65006F33BD /* OpenSans_Condensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BB952A7EEE10006F33BD /* OpenSans_Condensed-Italic.ttf */; };
+		A817BBB92A7EEE67006F33BD /* OpenSans_Condensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BBA92A7EEE11006F33BD /* OpenSans_Condensed-Light.ttf */; };
+		A817BBBA2A7EEE69006F33BD /* OpenSans_Condensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BB8E2A7EEE0F006F33BD /* OpenSans_Condensed-LightItalic.ttf */; };
+		A817BBBB2A7EEE6A006F33BD /* OpenSans_Condensed-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BB992A7EEE10006F33BD /* OpenSans_Condensed-Medium.ttf */; };
+		A817BBBC2A7EEE6C006F33BD /* OpenSans_Condensed-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BB9B2A7EEE10006F33BD /* OpenSans_Condensed-MediumItalic.ttf */; };
+		A817BBBD2A7EEE6F006F33BD /* OpenSans_Condensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BBA22A7EEE10006F33BD /* OpenSans_Condensed-Regular.ttf */; };
+		A817BBBE2A7EEE71006F33BD /* OpenSans_Condensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BBA72A7EEE11006F33BD /* OpenSans_Condensed-SemiBold.ttf */; };
+		A817BBBF2A7EEE74006F33BD /* OpenSans_Condensed-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BBAC2A7EEE11006F33BD /* OpenSans_Condensed-SemiBoldItalic.ttf */; };
+		A817BBC02A7EEE76006F33BD /* OpenSans_SemiCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BB9F2A7EEE10006F33BD /* OpenSans_SemiCondensed-Bold.ttf */; };
+		A817BBC12A7EEE78006F33BD /* OpenSans_SemiCondensed-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BB962A7EEE10006F33BD /* OpenSans_SemiCondensed-BoldItalic.ttf */; };
+		A817BBC22A7EEE7B006F33BD /* OpenSans_SemiCondensed-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BB982A7EEE10006F33BD /* OpenSans_SemiCondensed-ExtraBold.ttf */; };
+		A817BBC32A7EEE7D006F33BD /* OpenSans_SemiCondensed-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BB922A7EEE10006F33BD /* OpenSans_SemiCondensed-ExtraBoldItalic.ttf */; };
+		A817BBC42A7EEE7F006F33BD /* OpenSans_SemiCondensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BB8C2A7EEE0F006F33BD /* OpenSans_SemiCondensed-Italic.ttf */; };
+		A817BBC52A7EEE81006F33BD /* OpenSans_SemiCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BB912A7EEE0F006F33BD /* OpenSans_SemiCondensed-Light.ttf */; };
+		A817BBC62A7EEE84006F33BD /* OpenSans_SemiCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BBAB2A7EEE11006F33BD /* OpenSans_SemiCondensed-LightItalic.ttf */; };
+		A817BBC72A7EEE86006F33BD /* OpenSans_SemiCondensed-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BB9A2A7EEE10006F33BD /* OpenSans_SemiCondensed-Medium.ttf */; };
+		A817BBC82A7EEE88006F33BD /* OpenSans_SemiCondensed-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BB9D2A7EEE10006F33BD /* OpenSans_SemiCondensed-MediumItalic.ttf */; };
+		A817BBC92A7EEE8A006F33BD /* OpenSans_SemiCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BBAD2A7EEE11006F33BD /* OpenSans_SemiCondensed-Regular.ttf */; };
+		A817BBCA2A7EEE8C006F33BD /* OpenSans_SemiCondensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BB972A7EEE10006F33BD /* OpenSans_SemiCondensed-SemiBold.ttf */; };
+		A817BBCB2A7EEE8F006F33BD /* OpenSans_SemiCondensed-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BBAA2A7EEE11006F33BD /* OpenSans_SemiCondensed-SemiBoldItalic.ttf */; };
+		A817BBCC2A7EEE92006F33BD /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BBA02A7EEE10006F33BD /* OpenSans-Bold.ttf */; };
+		A817BBCD2A7EEE94006F33BD /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BB9C2A7EEE10006F33BD /* OpenSans-BoldItalic.ttf */; };
+		A817BBCE2A7EEE97006F33BD /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BBA62A7EEE11006F33BD /* OpenSans-ExtraBold.ttf */; };
+		A817BBCF2A7EEE99006F33BD /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BBAF2A7EEE11006F33BD /* OpenSans-ExtraBoldItalic.ttf */; };
+		A817BBD02A7EEE9B006F33BD /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BBA52A7EEE11006F33BD /* OpenSans-Italic.ttf */; };
+		A817BBD12A7EEE9E006F33BD /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BB8D2A7EEE0F006F33BD /* OpenSans-Light.ttf */; };
+		A817BBD22A7EEEA1006F33BD /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BBAE2A7EEE11006F33BD /* OpenSans-LightItalic.ttf */; };
+		A817BBD32A7EEEA3006F33BD /* OpenSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BBA82A7EEE11006F33BD /* OpenSans-Medium.ttf */; };
+		A817BBD42A7EEEA5006F33BD /* OpenSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BBA42A7EEE11006F33BD /* OpenSans-MediumItalic.ttf */; };
+		A817BBD52A7EEEA8006F33BD /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BB8F2A7EEE0F006F33BD /* OpenSans-Regular.ttf */; };
+		A817BBD62A7EEEAB006F33BD /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BB9E2A7EEE10006F33BD /* OpenSans-SemiBold.ttf */; };
+		A817BBD72A7EEEAD006F33BD /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BB902A7EEE0F006F33BD /* OpenSans-SemiBoldItalic.ttf */; };
+		A817BBDA2A7EF04E006F33BD /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817BBD92A7EF04E006F33BD /* Fonts.swift */; };
+		A817BBDD2A7EFBA4006F33BD /* OpenSans-Italic-VariableFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BBDB2A7EFBA4006F33BD /* OpenSans-Italic-VariableFont.ttf */; };
+		A817BBDE2A7EFBA4006F33BD /* OpenSans-VariableFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BBDC2A7EFBA4006F33BD /* OpenSans-VariableFont.ttf */; };
+		A817BBE02A7EFEEE006F33BD /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817BBDF2A7EFEEE006F33BD /* Components.swift */; };
+		A817BBE22A7EFFBD006F33BD /* Welcome2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817BBE12A7EFFBD006F33BD /* Welcome2.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A817BB262A7EC26D006F33BD /* Health Tracking 2023.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Health Tracking 2023.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A817BB292A7EC26D006F33BD /* Health_Tracking_2023App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Health_Tracking_2023App.swift; sourceTree = "<group>"; };
+		A817BB2D2A7EC26E006F33BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A817BB302A7EC26E006F33BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A817BB3E2A7EE2BF006F33BD /* Welcome1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome1.swift; sourceTree = "<group>"; };
+		A817BB412A7EE2E9006F33BD /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		A817BB8C2A7EEE0F006F33BD /* OpenSans_SemiCondensed-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans_SemiCondensed-Italic.ttf"; sourceTree = "<group>"; };
+		A817BB8D2A7EEE0F006F33BD /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		A817BB8E2A7EEE0F006F33BD /* OpenSans_Condensed-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans_Condensed-LightItalic.ttf"; sourceTree = "<group>"; };
+		A817BB8F2A7EEE0F006F33BD /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		A817BB902A7EEE0F006F33BD /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		A817BB912A7EEE0F006F33BD /* OpenSans_SemiCondensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans_SemiCondensed-Light.ttf"; sourceTree = "<group>"; };
+		A817BB922A7EEE10006F33BD /* OpenSans_SemiCondensed-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans_SemiCondensed-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		A817BB932A7EEE10006F33BD /* OpenSans_Condensed-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans_Condensed-BoldItalic.ttf"; sourceTree = "<group>"; };
+		A817BB942A7EEE10006F33BD /* OpenSans_Condensed-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans_Condensed-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		A817BB952A7EEE10006F33BD /* OpenSans_Condensed-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans_Condensed-Italic.ttf"; sourceTree = "<group>"; };
+		A817BB962A7EEE10006F33BD /* OpenSans_SemiCondensed-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans_SemiCondensed-BoldItalic.ttf"; sourceTree = "<group>"; };
+		A817BB972A7EEE10006F33BD /* OpenSans_SemiCondensed-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans_SemiCondensed-SemiBold.ttf"; sourceTree = "<group>"; };
+		A817BB982A7EEE10006F33BD /* OpenSans_SemiCondensed-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans_SemiCondensed-ExtraBold.ttf"; sourceTree = "<group>"; };
+		A817BB992A7EEE10006F33BD /* OpenSans_Condensed-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans_Condensed-Medium.ttf"; sourceTree = "<group>"; };
+		A817BB9A2A7EEE10006F33BD /* OpenSans_SemiCondensed-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans_SemiCondensed-Medium.ttf"; sourceTree = "<group>"; };
+		A817BB9B2A7EEE10006F33BD /* OpenSans_Condensed-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans_Condensed-MediumItalic.ttf"; sourceTree = "<group>"; };
+		A817BB9C2A7EEE10006F33BD /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		A817BB9D2A7EEE10006F33BD /* OpenSans_SemiCondensed-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans_SemiCondensed-MediumItalic.ttf"; sourceTree = "<group>"; };
+		A817BB9E2A7EEE10006F33BD /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		A817BB9F2A7EEE10006F33BD /* OpenSans_SemiCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans_SemiCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		A817BBA02A7EEE10006F33BD /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		A817BBA12A7EEE10006F33BD /* OpenSans_Condensed-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans_Condensed-ExtraBold.ttf"; sourceTree = "<group>"; };
+		A817BBA22A7EEE10006F33BD /* OpenSans_Condensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans_Condensed-Regular.ttf"; sourceTree = "<group>"; };
+		A817BBA32A7EEE10006F33BD /* OpenSans_Condensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans_Condensed-Bold.ttf"; sourceTree = "<group>"; };
+		A817BBA42A7EEE11006F33BD /* OpenSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		A817BBA52A7EEE11006F33BD /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		A817BBA62A7EEE11006F33BD /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		A817BBA72A7EEE11006F33BD /* OpenSans_Condensed-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans_Condensed-SemiBold.ttf"; sourceTree = "<group>"; };
+		A817BBA82A7EEE11006F33BD /* OpenSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Medium.ttf"; sourceTree = "<group>"; };
+		A817BBA92A7EEE11006F33BD /* OpenSans_Condensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans_Condensed-Light.ttf"; sourceTree = "<group>"; };
+		A817BBAA2A7EEE11006F33BD /* OpenSans_SemiCondensed-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans_SemiCondensed-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		A817BBAB2A7EEE11006F33BD /* OpenSans_SemiCondensed-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans_SemiCondensed-LightItalic.ttf"; sourceTree = "<group>"; };
+		A817BBAC2A7EEE11006F33BD /* OpenSans_Condensed-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans_Condensed-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		A817BBAD2A7EEE11006F33BD /* OpenSans_SemiCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans_SemiCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		A817BBAE2A7EEE11006F33BD /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		A817BBAF2A7EEE11006F33BD /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		A817BBD82A7EEF93006F33BD /* Health-Tracking-2023-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Health-Tracking-2023-Info.plist"; sourceTree = SOURCE_ROOT; };
+		A817BBD92A7EF04E006F33BD /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		A817BBDB2A7EFBA4006F33BD /* OpenSans-Italic-VariableFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Italic-VariableFont.ttf"; path = "../../../../../../../Downloads/Open_Sans/OpenSans-Italic-VariableFont.ttf"; sourceTree = "<group>"; };
+		A817BBDC2A7EFBA4006F33BD /* OpenSans-VariableFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-VariableFont.ttf"; path = "../../../../../../../Downloads/Open_Sans/OpenSans-VariableFont.ttf"; sourceTree = "<group>"; };
+		A817BBDF2A7EFEEE006F33BD /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		A817BBE12A7EFFBD006F33BD /* Welcome2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome2.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A817BB232A7EC26D006F33BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A817BB1D2A7EC26D006F33BD = {
+			isa = PBXGroup;
+			children = (
+				A817BB282A7EC26D006F33BD /* Health Tracking 2023 */,
+				A817BB272A7EC26D006F33BD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A817BB272A7EC26D006F33BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A817BB262A7EC26D006F33BD /* Health Tracking 2023.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A817BB282A7EC26D006F33BD /* Health Tracking 2023 */ = {
+			isa = PBXGroup;
+			children = (
+				A817BBD82A7EEF93006F33BD /* Health-Tracking-2023-Info.plist */,
+				A817BB392A7EE25A006F33BD /* Models */,
+				A817BB382A7EE24E006F33BD /* Views */,
+				A817BB292A7EC26D006F33BD /* Health_Tracking_2023App.swift */,
+				A817BB2D2A7EC26E006F33BD /* Assets.xcassets */,
+				A817BB2F2A7EC26E006F33BD /* Preview Content */,
+			);
+			path = "Health Tracking 2023";
+			sourceTree = "<group>";
+		};
+		A817BB2F2A7EC26E006F33BD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A817BB302A7EC26E006F33BD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A817BB372A7EE23F006F33BD /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				A817BB3E2A7EE2BF006F33BD /* Welcome1.swift */,
+				A817BBE12A7EFFBD006F33BD /* Welcome2.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		A817BB382A7EE24E006F33BD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A817BB402A7EE2DC006F33BD /* Assets */,
+				A817BB3D2A7EE29C006F33BD /* Settings */,
+				A817BB3C2A7EE295006F33BD /* Analysis */,
+				A817BB3B2A7EE28D006F33BD /* Detail */,
+				A817BB3A2A7EE284006F33BD /* Calendar */,
+				A817BB372A7EE23F006F33BD /* Welcome */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A817BB392A7EE25A006F33BD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A817BB3A2A7EE284006F33BD /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		A817BB3B2A7EE28D006F33BD /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		A817BB3C2A7EE295006F33BD /* Analysis */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Analysis;
+			sourceTree = "<group>";
+		};
+		A817BB3D2A7EE29C006F33BD /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		A817BB402A7EE2DC006F33BD /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A817BB432A7EEDF4006F33BD /* OpenSans */,
+				A817BB412A7EE2E9006F33BD /* Colors.swift */,
+				A817BBD92A7EF04E006F33BD /* Fonts.swift */,
+				A817BBDF2A7EFEEE006F33BD /* Components.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		A817BB432A7EEDF4006F33BD /* OpenSans */ = {
+			isa = PBXGroup;
+			children = (
+				A817BBDB2A7EFBA4006F33BD /* OpenSans-Italic-VariableFont.ttf */,
+				A817BBDC2A7EFBA4006F33BD /* OpenSans-VariableFont.ttf */,
+				A817BBA32A7EEE10006F33BD /* OpenSans_Condensed-Bold.ttf */,
+				A817BB932A7EEE10006F33BD /* OpenSans_Condensed-BoldItalic.ttf */,
+				A817BBA12A7EEE10006F33BD /* OpenSans_Condensed-ExtraBold.ttf */,
+				A817BB942A7EEE10006F33BD /* OpenSans_Condensed-ExtraBoldItalic.ttf */,
+				A817BB952A7EEE10006F33BD /* OpenSans_Condensed-Italic.ttf */,
+				A817BBA92A7EEE11006F33BD /* OpenSans_Condensed-Light.ttf */,
+				A817BB8E2A7EEE0F006F33BD /* OpenSans_Condensed-LightItalic.ttf */,
+				A817BB992A7EEE10006F33BD /* OpenSans_Condensed-Medium.ttf */,
+				A817BB9B2A7EEE10006F33BD /* OpenSans_Condensed-MediumItalic.ttf */,
+				A817BBA22A7EEE10006F33BD /* OpenSans_Condensed-Regular.ttf */,
+				A817BBA72A7EEE11006F33BD /* OpenSans_Condensed-SemiBold.ttf */,
+				A817BBAC2A7EEE11006F33BD /* OpenSans_Condensed-SemiBoldItalic.ttf */,
+				A817BB9F2A7EEE10006F33BD /* OpenSans_SemiCondensed-Bold.ttf */,
+				A817BB962A7EEE10006F33BD /* OpenSans_SemiCondensed-BoldItalic.ttf */,
+				A817BB982A7EEE10006F33BD /* OpenSans_SemiCondensed-ExtraBold.ttf */,
+				A817BB922A7EEE10006F33BD /* OpenSans_SemiCondensed-ExtraBoldItalic.ttf */,
+				A817BB8C2A7EEE0F006F33BD /* OpenSans_SemiCondensed-Italic.ttf */,
+				A817BB912A7EEE0F006F33BD /* OpenSans_SemiCondensed-Light.ttf */,
+				A817BBAB2A7EEE11006F33BD /* OpenSans_SemiCondensed-LightItalic.ttf */,
+				A817BB9A2A7EEE10006F33BD /* OpenSans_SemiCondensed-Medium.ttf */,
+				A817BB9D2A7EEE10006F33BD /* OpenSans_SemiCondensed-MediumItalic.ttf */,
+				A817BBAD2A7EEE11006F33BD /* OpenSans_SemiCondensed-Regular.ttf */,
+				A817BB972A7EEE10006F33BD /* OpenSans_SemiCondensed-SemiBold.ttf */,
+				A817BBAA2A7EEE11006F33BD /* OpenSans_SemiCondensed-SemiBoldItalic.ttf */,
+				A817BBA02A7EEE10006F33BD /* OpenSans-Bold.ttf */,
+				A817BB9C2A7EEE10006F33BD /* OpenSans-BoldItalic.ttf */,
+				A817BBA62A7EEE11006F33BD /* OpenSans-ExtraBold.ttf */,
+				A817BBAF2A7EEE11006F33BD /* OpenSans-ExtraBoldItalic.ttf */,
+				A817BBA52A7EEE11006F33BD /* OpenSans-Italic.ttf */,
+				A817BB8D2A7EEE0F006F33BD /* OpenSans-Light.ttf */,
+				A817BBAE2A7EEE11006F33BD /* OpenSans-LightItalic.ttf */,
+				A817BBA82A7EEE11006F33BD /* OpenSans-Medium.ttf */,
+				A817BBA42A7EEE11006F33BD /* OpenSans-MediumItalic.ttf */,
+				A817BB8F2A7EEE0F006F33BD /* OpenSans-Regular.ttf */,
+				A817BB9E2A7EEE10006F33BD /* OpenSans-SemiBold.ttf */,
+				A817BB902A7EEE0F006F33BD /* OpenSans-SemiBoldItalic.ttf */,
+			);
+			path = OpenSans;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A817BB252A7EC26D006F33BD /* Health Tracking 2023 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A817BB342A7EC26E006F33BD /* Build configuration list for PBXNativeTarget "Health Tracking 2023" */;
+			buildPhases = (
+				A817BB222A7EC26D006F33BD /* Sources */,
+				A817BB232A7EC26D006F33BD /* Frameworks */,
+				A817BB242A7EC26D006F33BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Health Tracking 2023";
+			productName = "Health Tracking 2023";
+			productReference = A817BB262A7EC26D006F33BD /* Health Tracking 2023.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A817BB1E2A7EC26D006F33BD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					A817BB252A7EC26D006F33BD = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = A817BB212A7EC26D006F33BD /* Build configuration list for PBXProject "Health Tracking 2023" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A817BB1D2A7EC26D006F33BD;
+			productRefGroup = A817BB272A7EC26D006F33BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A817BB252A7EC26D006F33BD /* Health Tracking 2023 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A817BB242A7EC26D006F33BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A817BB312A7EC26E006F33BD /* Preview Assets.xcassets in Resources */,
+				A817BBC32A7EEE7D006F33BD /* OpenSans_SemiCondensed-ExtraBoldItalic.ttf in Resources */,
+				A817BBB42A7EEE59006F33BD /* OpenSans_Condensed-ExtraBold.ttf in Resources */,
+				A817BBBE2A7EEE71006F33BD /* OpenSans_Condensed-SemiBold.ttf in Resources */,
+				A817BBD12A7EEE9E006F33BD /* OpenSans-Light.ttf in Resources */,
+				A817BBD42A7EEEA5006F33BD /* OpenSans-MediumItalic.ttf in Resources */,
+				A817BBBA2A7EEE69006F33BD /* OpenSans_Condensed-LightItalic.ttf in Resources */,
+				A817BBCA2A7EEE8C006F33BD /* OpenSans_SemiCondensed-SemiBold.ttf in Resources */,
+				A817BBB52A7EEE5D006F33BD /* OpenSans_Condensed-BoldItalic.ttf in Resources */,
+				A817BBCF2A7EEE99006F33BD /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				A817BBD52A7EEEA8006F33BD /* OpenSans-Regular.ttf in Resources */,
+				A817BBD22A7EEEA1006F33BD /* OpenSans-LightItalic.ttf in Resources */,
+				A817BBBB2A7EEE6A006F33BD /* OpenSans_Condensed-Medium.ttf in Resources */,
+				A817BBB72A7EEE63006F33BD /* OpenSans_Condensed-ExtraBoldItalic.ttf in Resources */,
+				A817BBC52A7EEE81006F33BD /* OpenSans_SemiCondensed-Light.ttf in Resources */,
+				A817BBC02A7EEE76006F33BD /* OpenSans_SemiCondensed-Bold.ttf in Resources */,
+				A817BBD02A7EEE9B006F33BD /* OpenSans-Italic.ttf in Resources */,
+				A817BBC92A7EEE8A006F33BD /* OpenSans_SemiCondensed-Regular.ttf in Resources */,
+				A817BBD62A7EEEAB006F33BD /* OpenSans-SemiBold.ttf in Resources */,
+				A817BBBC2A7EEE6C006F33BD /* OpenSans_Condensed-MediumItalic.ttf in Resources */,
+				A817BBC42A7EEE7F006F33BD /* OpenSans_SemiCondensed-Italic.ttf in Resources */,
+				A817BBC22A7EEE7B006F33BD /* OpenSans_SemiCondensed-ExtraBold.ttf in Resources */,
+				A817BBC72A7EEE86006F33BD /* OpenSans_SemiCondensed-Medium.ttf in Resources */,
+				A817BBD72A7EEEAD006F33BD /* OpenSans-SemiBoldItalic.ttf in Resources */,
+				A817BBBD2A7EEE6F006F33BD /* OpenSans_Condensed-Regular.ttf in Resources */,
+				A817BBCB2A7EEE8F006F33BD /* OpenSans_SemiCondensed-SemiBoldItalic.ttf in Resources */,
+				A817BBDD2A7EFBA4006F33BD /* OpenSans-Italic-VariableFont.ttf in Resources */,
+				A817BBB62A7EEE60006F33BD /* OpenSans_Condensed-Bold.ttf in Resources */,
+				A817BBD32A7EEEA3006F33BD /* OpenSans-Medium.ttf in Resources */,
+				A817BBCC2A7EEE92006F33BD /* OpenSans-Bold.ttf in Resources */,
+				A817BBDE2A7EFBA4006F33BD /* OpenSans-VariableFont.ttf in Resources */,
+				A817BBC12A7EEE78006F33BD /* OpenSans_SemiCondensed-BoldItalic.ttf in Resources */,
+				A817BBB92A7EEE67006F33BD /* OpenSans_Condensed-Light.ttf in Resources */,
+				A817BBC82A7EEE88006F33BD /* OpenSans_SemiCondensed-MediumItalic.ttf in Resources */,
+				A817BBCD2A7EEE94006F33BD /* OpenSans-BoldItalic.ttf in Resources */,
+				A817BBC62A7EEE84006F33BD /* OpenSans_SemiCondensed-LightItalic.ttf in Resources */,
+				A817BBBF2A7EEE74006F33BD /* OpenSans_Condensed-SemiBoldItalic.ttf in Resources */,
+				A817BBCE2A7EEE97006F33BD /* OpenSans-ExtraBold.ttf in Resources */,
+				A817BBB82A7EEE65006F33BD /* OpenSans_Condensed-Italic.ttf in Resources */,
+				A817BB2E2A7EC26E006F33BD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A817BB222A7EC26D006F33BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A817BBDA2A7EF04E006F33BD /* Fonts.swift in Sources */,
+				A817BBE22A7EFFBD006F33BD /* Welcome2.swift in Sources */,
+				A817BB3F2A7EE2BF006F33BD /* Welcome1.swift in Sources */,
+				A817BBE02A7EFEEE006F33BD /* Components.swift in Sources */,
+				A817BB422A7EE2E9006F33BD /* Colors.swift in Sources */,
+				A817BB2A2A7EC26D006F33BD /* Health_Tracking_2023App.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A817BB322A7EC26E006F33BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A817BB332A7EC26E006F33BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A817BB352A7EC26E006F33BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Health Tracking 2023/Preview Content\"";
+				DEVELOPMENT_TEAM = WNX6LNFDXA;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Health-Tracking-2023-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evelyn-kessler.Health-Tracking-2023";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A817BB362A7EC26E006F33BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Health Tracking 2023/Preview Content\"";
+				DEVELOPMENT_TEAM = WNX6LNFDXA;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Health-Tracking-2023-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.evelyn-kessler.Health-Tracking-2023";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A817BB212A7EC26D006F33BD /* Build configuration list for PBXProject "Health Tracking 2023" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A817BB322A7EC26E006F33BD /* Debug */,
+				A817BB332A7EC26E006F33BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A817BB342A7EC26E006F33BD /* Build configuration list for PBXNativeTarget "Health Tracking 2023" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A817BB352A7EC26E006F33BD /* Debug */,
+				A817BB362A7EC26E006F33BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A817BB1E2A7EC26D006F33BD /* Project object */;
+}
