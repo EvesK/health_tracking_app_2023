@@ -103,7 +103,6 @@
 		A817BBAD2A7EEE11006F33BD /* OpenSans_SemiCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans_SemiCondensed-Regular.ttf"; sourceTree = "<group>"; };
 		A817BBAE2A7EEE11006F33BD /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
 		A817BBAF2A7EEE11006F33BD /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
-		A817BBD82A7EEF93006F33BD /* Health-Tracking-2023-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Health-Tracking-2023-Info.plist"; sourceTree = SOURCE_ROOT; };
 		A817BBD92A7EF04E006F33BD /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		A817BBDB2A7EFBA4006F33BD /* OpenSans-Italic-VariableFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Italic-VariableFont.ttf"; path = "../../../../../../../Downloads/Open_Sans/OpenSans-Italic-VariableFont.ttf"; sourceTree = "<group>"; };
 		A817BBDC2A7EFBA4006F33BD /* OpenSans-VariableFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-VariableFont.ttf"; path = "../../../../../../../Downloads/Open_Sans/OpenSans-VariableFont.ttf"; sourceTree = "<group>"; };
@@ -146,8 +145,6 @@
 		A817BB282A7EC26D006F33BD /* Health Tracking 2023 */ = {
 			isa = PBXGroup;
 			children = (
-				A817BBD82A7EEF93006F33BD /* Health-Tracking-2023-Info.plist */,
-				A817BB392A7EE25A006F33BD /* Models */,
 				A817BB382A7EE24E006F33BD /* Views */,
 				A817BB292A7EC26D006F33BD /* Health_Tracking_2023App.swift */,
 				A817BB2D2A7EC26E006F33BD /* Assets.xcassets */,
@@ -185,13 +182,6 @@
 				A817BBFC2A807DE2006F33BD /* MainView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		A817BB392A7EE25A006F33BD /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		A817BB3A2A7EE284006F33BD /* Calendar */ = {
@@ -541,6 +531,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Health-Tracking-2023-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Dahlia;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -571,6 +562,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Health-Tracking-2023-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Dahlia;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
