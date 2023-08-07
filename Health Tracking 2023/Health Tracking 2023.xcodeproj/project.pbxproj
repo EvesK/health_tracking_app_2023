@@ -52,13 +52,12 @@
 		A817BBDD2A7EFBA4006F33BD /* OpenSans-Italic-VariableFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BBDB2A7EFBA4006F33BD /* OpenSans-Italic-VariableFont.ttf */; };
 		A817BBDE2A7EFBA4006F33BD /* OpenSans-VariableFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BBDC2A7EFBA4006F33BD /* OpenSans-VariableFont.ttf */; };
 		A817BBE02A7EFEEE006F33BD /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817BBDF2A7EFEEE006F33BD /* Components.swift */; };
-		A817BBE62A7FF900006F33BD /* Welcome1Background.svg in Resources */ = {isa = PBXBuildFile; fileRef = A817BBE52A7FF900006F33BD /* Welcome1Background.svg */; };
-		A817BBE82A8003A1006F33BD /* WelcomeCustomBackButton.svg in Resources */ = {isa = PBXBuildFile; fileRef = A817BBE72A8003A1006F33BD /* WelcomeCustomBackButton.svg */; };
 		A817BBF22A801EB1006F33BD /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817BBF12A801EB1006F33BD /* CalendarView.swift */; };
 		A817BBF52A807A50006F33BD /* ManageHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817BBF42A807A50006F33BD /* ManageHomeView.swift */; };
 		A817BBF72A807A7E006F33BD /* AnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817BBF62A807A7E006F33BD /* AnalysisView.swift */; };
 		A817BBF92A807A8C006F33BD /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817BBF82A807A8C006F33BD /* DetailView.swift */; };
 		A817BBFB2A807AA3006F33BD /* SettingsHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817BBFA2A807AA3006F33BD /* SettingsHomeView.swift */; };
+		A817BBFD2A807DE3006F33BD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817BBFC2A807DE2006F33BD /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,13 +108,12 @@
 		A817BBDB2A7EFBA4006F33BD /* OpenSans-Italic-VariableFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Italic-VariableFont.ttf"; path = "../../../../../../../Downloads/Open_Sans/OpenSans-Italic-VariableFont.ttf"; sourceTree = "<group>"; };
 		A817BBDC2A7EFBA4006F33BD /* OpenSans-VariableFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-VariableFont.ttf"; path = "../../../../../../../Downloads/Open_Sans/OpenSans-VariableFont.ttf"; sourceTree = "<group>"; };
 		A817BBDF2A7EFEEE006F33BD /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
-		A817BBE52A7FF900006F33BD /* Welcome1Background.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Welcome1Background.svg; path = ../../../../../Welcome1Background.svg; sourceTree = "<group>"; };
-		A817BBE72A8003A1006F33BD /* WelcomeCustomBackButton.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = WelcomeCustomBackButton.svg; path = ../../../../../WelcomeCustomBackButton.svg; sourceTree = "<group>"; };
 		A817BBF12A801EB1006F33BD /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		A817BBF42A807A50006F33BD /* ManageHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageHomeView.swift; sourceTree = "<group>"; };
 		A817BBF62A807A7E006F33BD /* AnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisView.swift; sourceTree = "<group>"; };
 		A817BBF82A807A8C006F33BD /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		A817BBFA2A807AA3006F33BD /* SettingsHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHomeView.swift; sourceTree = "<group>"; };
+		A817BBFC2A807DE2006F33BD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +182,7 @@
 				A817BB3B2A7EE28D006F33BD /* Detail */,
 				A817BB3A2A7EE284006F33BD /* Calendar */,
 				A817BB372A7EE23F006F33BD /* Welcome */,
+				A817BBFC2A807DE2006F33BD /* MainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -230,8 +229,6 @@
 		A817BB402A7EE2DC006F33BD /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				A817BBE72A8003A1006F33BD /* WelcomeCustomBackButton.svg */,
-				A817BBE52A7FF900006F33BD /* Welcome1Background.svg */,
 				A817BB432A7EEDF4006F33BD /* OpenSans */,
 				A817BB412A7EE2E9006F33BD /* Colors.swift */,
 				A817BBD92A7EF04E006F33BD /* Fonts.swift */,
@@ -353,7 +350,6 @@
 			files = (
 				A817BB312A7EC26E006F33BD /* Preview Assets.xcassets in Resources */,
 				A817BBC32A7EEE7D006F33BD /* OpenSans_SemiCondensed-ExtraBoldItalic.ttf in Resources */,
-				A817BBE82A8003A1006F33BD /* WelcomeCustomBackButton.svg in Resources */,
 				A817BBB42A7EEE59006F33BD /* OpenSans_Condensed-ExtraBold.ttf in Resources */,
 				A817BBBE2A7EEE71006F33BD /* OpenSans_Condensed-SemiBold.ttf in Resources */,
 				A817BBD12A7EEE9E006F33BD /* OpenSans-Light.ttf in Resources */,
@@ -373,7 +369,6 @@
 				A817BBD62A7EEEAB006F33BD /* OpenSans-SemiBold.ttf in Resources */,
 				A817BBBC2A7EEE6C006F33BD /* OpenSans_Condensed-MediumItalic.ttf in Resources */,
 				A817BBC42A7EEE7F006F33BD /* OpenSans_SemiCondensed-Italic.ttf in Resources */,
-				A817BBE62A7FF900006F33BD /* Welcome1Background.svg in Resources */,
 				A817BBC22A7EEE7B006F33BD /* OpenSans_SemiCondensed-ExtraBold.ttf in Resources */,
 				A817BBC72A7EEE86006F33BD /* OpenSans_SemiCondensed-Medium.ttf in Resources */,
 				A817BBD72A7EEEAD006F33BD /* OpenSans-SemiBoldItalic.ttf in Resources */,
@@ -403,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A817BBFD2A807DE3006F33BD /* MainView.swift in Sources */,
 				A817BBF22A801EB1006F33BD /* CalendarView.swift in Sources */,
 				A817BBF92A807A8C006F33BD /* DetailView.swift in Sources */,
 				A817BBFB2A807AA3006F33BD /* SettingsHomeView.swift in Sources */,

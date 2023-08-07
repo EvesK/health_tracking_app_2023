@@ -11,7 +11,7 @@ import SwiftUI
 struct Health_Tracking_2023App: App {
     var body: some Scene {
         WindowGroup {
-            Welcome1()
+            MainView()
 //                .font(.body) // Set the default body font style globally
         }
     }

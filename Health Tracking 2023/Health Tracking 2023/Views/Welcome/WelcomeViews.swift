@@ -548,7 +548,7 @@ struct Welcome6: View {
                     Spacer()
 
                     NavigationLink {
-                        ManageHomeView()
+                        CalendarView()
                     } label: {
                         HStack {
                             Text("Done")
