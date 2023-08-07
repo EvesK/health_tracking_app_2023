@@ -19,6 +19,16 @@ struct MainView: View {
                 .tabItem {
                     Label("Order", systemImage: "square.and.pencil")
                 }
+            
+            AnalysisView()
+                .tabItem {
+                    Image("CustomCalendar")
+                }
+            
+            ManageHomeView()
+                .tabItem {
+                    Image("CustomCalendar")
+                }
         }
     }
 }
