@@ -59,3 +59,33 @@ struct RoundNavLink<Destination: View>: View {
         }
     }
 }
+
+struct CustomBackButton: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    
+    var body: some View {
+        HStack {
+            Button(action: {
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
+                Image(systemName: "arrow.left")
+                    .resizable()
+                    .frame(width: 36, height: 26)
+                    .foregroundColor(AppColor.white)
+            }
+            .padding(.top, 60)
+            Spacer()
+        }
+    }
+}
+
+struct CustomDivider: View {
+    let color: Color = AppColor.white
+    let width: CGFloat = 2
+    var body: some View {
+        Rectangle()
+            .fill(color)
+            .frame(height: width)
+            .edgesIgnoringSafeArea(.horizontal)
+    }
+}

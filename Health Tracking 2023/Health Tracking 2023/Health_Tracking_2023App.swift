@@ -9,7 +9,6 @@ import SwiftUI
 
 @main
 struct Health_Tracking_2023App: App {
-    
     var body: some Scene {
         WindowGroup {
             Welcome1()
@@ -17,3 +16,4 @@ struct Health_Tracking_2023App: App {
         }
     }
 }
+
