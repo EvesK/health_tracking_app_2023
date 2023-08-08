@@ -37,13 +37,13 @@ struct Welcome1: View {
                             VStack {
                                 HStack {
                                     Text("Welcome to")
-                                        .font(.custom("OpenSans-ExtraBold", size: 64))
+                                        .font(.custom("OpenSans-ExtraBold", size: 60))
                                         .tracking(-5)
                                     Spacer()
                                 }
                                 HStack {
                                     Text("Dahlia")
-                                        .font(.custom("OpenSans-ExtraBold", size: 64))
+                                        .font(.custom("OpenSans-ExtraBold", size: 60))
                                         .tracking(-5)
                                     Spacer()
                                 }
@@ -84,6 +84,12 @@ struct Welcome1Squiggle: Shape {
 
 struct Welcome2: View {
     @State var userName: String = ""
+    @State var showingContinueButton: Bool = false
+    @State var navigate: Bool = false
+
+    
+    let settingsManager = SettingsManager.shared
+    
     var body: some View {
         ZStack {
             LinearGradient(colors: [AppColor.purple, AppColor.lightblue], startPoint: .bottom, endPoint: .top)
@@ -110,28 +116,42 @@ struct Welcome2: View {
                         .accentColor(AppColor.white)
                         .foregroundColor(AppColor.white)
                         .font(.custom("OpenSans-SemiBold", size: 46))
+                
                     CustomDivider()
+                    
                     HStack {
                         Spacer()
-
-                        NavigationLink {
-                            Welcome3(userName: userName)
-                        } label: {
-                            HStack {
-                                Text("Continue")
-                                    .font(.custom("OpenSans-Regular", size: 12))
-                                Image(systemName: "arrow.right")
-                                    .resizable()
-                                    .frame(width: 16, height: 8)
+                        
+                        if !userName.isEmpty {
+                            Button {
+                                navigate = true
+                                settingsManager.saveUserName(userName)
+                            } label: {
+                                HStack {
+                                    Text("Continue")
+                                        .font(.custom("OpenSans-Regular", size: 12))
+                                    Image(systemName: "arrow.right")
+                                        .resizable()
+                                        .frame(width: 16, height: 8)
+                                }
+                                .foregroundColor(AppColor.white)
+                                .padding(.horizontal, 8)
+                                .padding(.vertical, 4)
                             }
-                            .foregroundColor(AppColor.white)
-                            .padding(.horizontal, 8)
-                            .padding(.vertical, 4)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 20)
+                                    .stroke(AppColor.white, lineWidth: 1)
+                            )
+                            .opacity(showingContinueButton ? 1 : 0)
+                            .onAppear {
+                                withAnimation(.easeIn(duration: 0.3)) {
+                                    showingContinueButton = true
+                                }
+                            }
+                            .onDisappear() {
+                                showingContinueButton = false
+                            }
                         }
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(AppColor.white, lineWidth: 1)
-                        )
                     }
                 }
                 
@@ -140,6 +160,9 @@ struct Welcome2: View {
             .padding(.horizontal, 40)
         }
         .navigationBarBackButtonHidden()
+        .navigationDestination(isPresented: $navigate) {
+            Welcome3(userName: userName)
+        }
     }
 }
 
@@ -177,7 +200,7 @@ struct Welcome3: View {
                             .font(.custom("OpenSans-Bold", size: 40))
                         Spacer()
                     }
-                    
+                                        
                     Spacer()
                         .frame(height: 40)
                     
@@ -239,7 +262,7 @@ struct Welcome3: View {
                     
                     HStack {
                         Spacer()
-
+                        
                         NavigationLink {
                             Welcome4()
                         } label: {
@@ -277,7 +300,7 @@ struct HelloMessage: View {
     var body: some View {
         VStack {
             HStack {
-                Text("Hello\(userName.isEmpty ? "" : " " + userName),")
+                Text("Hello \(userName),")
                     .font(.custom("OpenSans-SemiBold", size: 42))
                     .foregroundColor(AppColor.black)
 
@@ -548,7 +571,7 @@ struct Welcome6: View {
                     Spacer()
 
                     NavigationLink {
-                        CalendarView()
+                        MainView()
                     } label: {
                         HStack {
                             Text("Done")

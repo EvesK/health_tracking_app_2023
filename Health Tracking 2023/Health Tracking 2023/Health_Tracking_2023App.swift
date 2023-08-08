@@ -9,10 +9,14 @@ import SwiftUI
 
 @main
 struct Health_Tracking_2023App: App {
+    let settingsManager = SettingsManager.shared
     var body: some Scene {
         WindowGroup {
-            MainView()
-//                .font(.body) // Set the default body font style globally
+            if settingsManager.loadUserName().isEmpty {
+                Welcome1()
+            } else {
+                MainView()
+            }
         }
     }
 }

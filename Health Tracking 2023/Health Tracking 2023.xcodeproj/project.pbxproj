@@ -58,6 +58,7 @@
 		A817BBF92A807A8C006F33BD /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817BBF82A807A8C006F33BD /* DetailView.swift */; };
 		A817BBFB2A807AA3006F33BD /* SettingsHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817BBFA2A807AA3006F33BD /* SettingsHomeView.swift */; };
 		A817BBFD2A807DE3006F33BD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817BBFC2A807DE2006F33BD /* MainView.swift */; };
+		A8A9EE902A82D5F700842770 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A9EE8F2A82D5F700842770 /* SettingsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +114,7 @@
 		A817BBF82A807A8C006F33BD /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		A817BBFA2A807AA3006F33BD /* SettingsHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHomeView.swift; sourceTree = "<group>"; };
 		A817BBFC2A807DE2006F33BD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		A8A9EE8F2A82D5F700842770 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 		A817BB282A7EC26D006F33BD /* Health Tracking 2023 */ = {
 			isa = PBXGroup;
 			children = (
+				A8A9EE8E2A82D5E700842770 /* Models */,
 				A817BB382A7EE24E006F33BD /* Views */,
 				A817BB292A7EC26D006F33BD /* Health_Tracking_2023App.swift */,
 				A817BB2D2A7EC26E006F33BD /* Assets.xcassets */,
@@ -280,6 +283,14 @@
 			path = Manage;
 			sourceTree = "<group>";
 		};
+		A8A9EE8E2A82D5E700842770 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A8A9EE8F2A82D5F700842770 /* SettingsManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -396,6 +407,7 @@
 				A817BB3F2A7EE2BF006F33BD /* WelcomeViews.swift in Sources */,
 				A817BBE02A7EFEEE006F33BD /* Components.swift in Sources */,
 				A817BBF72A807A7E006F33BD /* AnalysisView.swift in Sources */,
+				A8A9EE902A82D5F700842770 /* SettingsManager.swift in Sources */,
 				A817BB422A7EE2E9006F33BD /* Colors.swift in Sources */,
 				A817BB2A2A7EC26D006F33BD /* Health_Tracking_2023App.swift in Sources */,
 				A817BBF52A807A50006F33BD /* ManageHomeView.swift in Sources */,

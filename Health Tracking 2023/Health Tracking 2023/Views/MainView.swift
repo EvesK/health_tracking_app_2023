@@ -17,18 +17,20 @@ struct MainView: View {
 
             DetailView()
                 .tabItem {
-                    Label("Order", systemImage: "square.and.pencil")
+                    Image(systemName: "text.justify.left")
+
                 }
             
             AnalysisView()
                 .tabItem {
-                    Image("CustomCalendar")
+                    Image(systemName: "chart.bar")
                 }
             
             ManageHomeView()
                 .tabItem {
-                    Image("CustomCalendar")
+                    Image(systemName: "slider.horizontal.3")
                 }
         }
+        .navigationBarBackButtonHidden()
     }
 }
