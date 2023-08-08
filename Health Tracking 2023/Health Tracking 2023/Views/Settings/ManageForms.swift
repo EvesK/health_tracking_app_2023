@@ -13,7 +13,7 @@ struct SettingsView_InputTypes: View {
     }
 }
 
-struct SettingsView_AnalysisTypes: View {
+struct SettingsView_AnalysisTemplates: View {
     var body: some View {
         Text("Analysis Types")
     }
