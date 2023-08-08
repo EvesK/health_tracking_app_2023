@@ -53,12 +53,18 @@
 		A817BBDE2A7EFBA4006F33BD /* OpenSans-VariableFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BBDC2A7EFBA4006F33BD /* OpenSans-VariableFont.ttf */; };
 		A817BBE02A7EFEEE006F33BD /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817BBDF2A7EFEEE006F33BD /* Components.swift */; };
 		A817BBF22A801EB1006F33BD /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817BBF12A801EB1006F33BD /* CalendarView.swift */; };
-		A817BBF52A807A50006F33BD /* ManageHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817BBF42A807A50006F33BD /* ManageHomeView.swift */; };
+		A817BBF52A807A50006F33BD /* ManageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817BBF42A807A50006F33BD /* ManageView.swift */; };
 		A817BBF72A807A7E006F33BD /* AnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817BBF62A807A7E006F33BD /* AnalysisView.swift */; };
 		A817BBF92A807A8C006F33BD /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817BBF82A807A8C006F33BD /* DetailView.swift */; };
-		A817BBFB2A807AA3006F33BD /* SettingsHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817BBFA2A807AA3006F33BD /* SettingsHomeView.swift */; };
+		A817BBFB2A807AA3006F33BD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817BBFA2A807AA3006F33BD /* SettingsView.swift */; };
 		A817BBFD2A807DE3006F33BD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817BBFC2A807DE2006F33BD /* MainView.swift */; };
 		A8A9EE902A82D5F700842770 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A9EE8F2A82D5F700842770 /* SettingsManager.swift */; };
+		A8A9EE922A82F28B00842770 /* Calendar2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A9EE912A82F28B00842770 /* Calendar2.swift */; };
+		A8A9EE942A82F2ED00842770 /* Calendar1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A9EE932A82F2ED00842770 /* Calendar1.swift */; };
+		A8A9EE962A82F63B00842770 /* MyInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A9EE952A82F63B00842770 /* MyInformation.swift */; };
+		A8A9EE982A82F67600842770 /* ManageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A9EE972A82F67600842770 /* ManageData.swift */; };
+		A8A9EE9A2A82F6A800842770 /* ManageForms.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A9EE992A82F6A800842770 /* ManageForms.swift */; };
+		A8A9EE9C2A82F75600842770 /* NavigationStackHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A9EE9B2A82F75600842770 /* NavigationStackHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,12 +115,18 @@
 		A817BBDC2A7EFBA4006F33BD /* OpenSans-VariableFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-VariableFont.ttf"; path = "../../../../../../../Downloads/Open_Sans/OpenSans-VariableFont.ttf"; sourceTree = "<group>"; };
 		A817BBDF2A7EFEEE006F33BD /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		A817BBF12A801EB1006F33BD /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
-		A817BBF42A807A50006F33BD /* ManageHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageHomeView.swift; sourceTree = "<group>"; };
+		A817BBF42A807A50006F33BD /* ManageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageView.swift; sourceTree = "<group>"; };
 		A817BBF62A807A7E006F33BD /* AnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisView.swift; sourceTree = "<group>"; };
 		A817BBF82A807A8C006F33BD /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		A817BBFA2A807AA3006F33BD /* SettingsHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHomeView.swift; sourceTree = "<group>"; };
+		A817BBFA2A807AA3006F33BD /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A817BBFC2A807DE2006F33BD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		A8A9EE8F2A82D5F700842770 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		A8A9EE912A82F28B00842770 /* Calendar2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar2.swift; sourceTree = "<group>"; };
+		A8A9EE932A82F2ED00842770 /* Calendar1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendar1.swift; sourceTree = "<group>"; };
+		A8A9EE952A82F63B00842770 /* MyInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInformation.swift; sourceTree = "<group>"; };
+		A8A9EE972A82F67600842770 /* ManageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageData.swift; sourceTree = "<group>"; };
+		A8A9EE992A82F6A800842770 /* ManageForms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageForms.swift; sourceTree = "<group>"; };
+		A8A9EE9B2A82F75600842770 /* NavigationStackHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				A817BBF12A801EB1006F33BD /* CalendarView.swift */,
+				A8A9EE932A82F2ED00842770 /* Calendar1.swift */,
+				A8A9EE912A82F28B00842770 /* Calendar2.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -214,7 +228,10 @@
 		A817BB3D2A7EE29C006F33BD /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				A817BBFA2A807AA3006F33BD /* SettingsHomeView.swift */,
+				A817BBFA2A807AA3006F33BD /* SettingsView.swift */,
+				A8A9EE952A82F63B00842770 /* MyInformation.swift */,
+				A8A9EE972A82F67600842770 /* ManageData.swift */,
+				A8A9EE992A82F6A800842770 /* ManageForms.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -278,7 +295,7 @@
 		A817BBF32A807A39006F33BD /* Manage */ = {
 			isa = PBXGroup;
 			children = (
-				A817BBF42A807A50006F33BD /* ManageHomeView.swift */,
+				A817BBF42A807A50006F33BD /* ManageView.swift */,
 			);
 			path = Manage;
 			sourceTree = "<group>";
@@ -287,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				A8A9EE8F2A82D5F700842770 /* SettingsManager.swift */,
+				A8A9EE9B2A82F75600842770 /* NavigationStackHandler.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -401,8 +419,11 @@
 			files = (
 				A817BBFD2A807DE3006F33BD /* MainView.swift in Sources */,
 				A817BBF22A801EB1006F33BD /* CalendarView.swift in Sources */,
+				A8A9EE922A82F28B00842770 /* Calendar2.swift in Sources */,
+				A8A9EE942A82F2ED00842770 /* Calendar1.swift in Sources */,
+				A8A9EE982A82F67600842770 /* ManageData.swift in Sources */,
 				A817BBF92A807A8C006F33BD /* DetailView.swift in Sources */,
-				A817BBFB2A807AA3006F33BD /* SettingsHomeView.swift in Sources */,
+				A817BBFB2A807AA3006F33BD /* SettingsView.swift in Sources */,
 				A817BBDA2A7EF04E006F33BD /* Fonts.swift in Sources */,
 				A817BB3F2A7EE2BF006F33BD /* WelcomeViews.swift in Sources */,
 				A817BBE02A7EFEEE006F33BD /* Components.swift in Sources */,
@@ -410,7 +431,10 @@
 				A8A9EE902A82D5F700842770 /* SettingsManager.swift in Sources */,
 				A817BB422A7EE2E9006F33BD /* Colors.swift in Sources */,
 				A817BB2A2A7EC26D006F33BD /* Health_Tracking_2023App.swift in Sources */,
-				A817BBF52A807A50006F33BD /* ManageHomeView.swift in Sources */,
+				A8A9EE962A82F63B00842770 /* MyInformation.swift in Sources */,
+				A8A9EE9A2A82F6A800842770 /* ManageForms.swift in Sources */,
+				A817BBF52A807A50006F33BD /* ManageView.swift in Sources */,
+				A8A9EE9C2A82F75600842770 /* NavigationStackHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,8 +571,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -578,8 +603,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

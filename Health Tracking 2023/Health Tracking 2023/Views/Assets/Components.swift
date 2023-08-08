@@ -60,7 +60,7 @@ struct RoundNavLink<Destination: View>: View {
     }
 }
 
-struct CustomBackButton: View {
+struct WelcomeViewsBackButton: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {

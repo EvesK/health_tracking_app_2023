@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct CalendarView: View {
+    @State var display: String = "Calendar1"
     var body: some View {
-        Text("Calendar")
+        if display == "Calendar1" {
+            Calendar1(display: $display)
+        } else {
+            Calendar2(display: $display)
+        }
     }
 }

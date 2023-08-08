@@ -96,7 +96,7 @@ struct Welcome2: View {
                 .edgesIgnoringSafeArea([.vertical])
             
             VStack {
-                CustomBackButton()
+                WelcomeViewsBackButton()
 
                 Spacer()
                     .frame(height: 60)
@@ -190,7 +190,7 @@ struct Welcome3: View {
                     .opacity(displayMessage ? 1 : 0)
             } else {
                 VStack {
-                    CustomBackButton()
+                    WelcomeViewsBackButton()
                     
                     Spacer()
                         .frame(height: 40)
@@ -324,7 +324,7 @@ struct Welcome4: View {
                 .edgesIgnoringSafeArea([.vertical])
                     
             VStack {
-                CustomBackButton()
+                WelcomeViewsBackButton()
 
                 Spacer()
                     .frame(height: 40)
@@ -434,7 +434,7 @@ struct Welcome5: View {
                 .edgesIgnoringSafeArea([.vertical])
                     
             VStack {
-                CustomBackButton()
+                WelcomeViewsBackButton()
 
                 Spacer()
                     .frame(height: 40)
@@ -544,7 +544,7 @@ struct Welcome6: View {
                 .edgesIgnoringSafeArea([.vertical])
                     
             VStack {
-                CustomBackButton()
+                WelcomeViewsBackButton()
 
                 Spacer()
                     .frame(height: 40)
