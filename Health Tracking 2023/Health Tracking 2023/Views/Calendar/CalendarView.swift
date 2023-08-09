@@ -5,181 +5,288 @@
 //  Created by Evelyn on 8/6/23.
 //
 
+// calendar code basis credit: https://gist.github.com/mecid/f8859ea4bdbd02cf5d440d58e936faec/9169b0293f709bb1f560de2ca8184ea903fd5116
+
 import SwiftUI
 
-struct CalendarView: View {
-    @EnvironmentObject var dateHolder: DateHolder
+fileprivate extension DateFormatter {
+    static var month: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMMM"
+        return formatter
+    }
+
+    static var monthAndYear: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMMM yyyy"
+        return formatter
+    }
+}
+
+fileprivate extension Calendar {
+    func generateDates(inside interval: DateInterval, matching components: DateComponents) -> [Date] {
+        var dates: [Date] = []
+        dates.append(interval.start)
+
+        enumerateDates(startingAfter: interval.start, matching: components, matchingPolicy: .nextTime) { date, _, stop in
+            if let date = date {
+                if date < interval.end {
+                    dates.append(date)
+                } else {
+                    stop = true
+                }
+            }
+        }
+
+        return dates
+    }
+}
+
+extension Date {
+    var month: Int {
+       let cal = Calendar.current
+       return cal.dateComponents([.month], from: self).month ?? 0
+    }
+    
+    var day: Int {
+       let cal = Calendar.current
+       return cal.dateComponents([.day], from: self).day ?? 0
+    }
+    
+    var year: Int {
+       let cal = Calendar.current
+       return cal.dateComponents([.year], from: self).year ?? 0
+    }
+    
+    var second: Int {
+       let cal = Calendar.current
+       return cal.dateComponents([.second], from: self).second ?? 0
+    }
+    
+    var minute: Int {
+       let cal = Calendar.current
+       return cal.dateComponents([.minute], from: self).minute ?? 0
+    }
+    
+    var hour: Int {
+       let cal = Calendar.current
+       return cal.dateComponents([.hour], from: self).hour ?? 0
+    }
+    
+    var weekday: String {
+        return self.formatted(as: "EEEE")
+    }
+    
+    func formatted(as string: String) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = string
+        return formatter.string(from: self)
+    }
+}
+
+struct WeekView<DateView>: View where DateView: View {
+    @Environment(\.calendar) var calendar
+
+    let week: Date
+    let content: (Date) -> DateView
+
+    init(week: Date, @ViewBuilder content: @escaping (Date) -> DateView) {
+        self.week = week
+        self.content = content
+    }
+
+    private var days: [Date] {
+        guard let weekInterval = calendar.dateInterval(of: .weekOfYear, for: week) else { return [] }
+        return calendar.generateDates(inside: weekInterval, matching: DateComponents(hour: 0, minute: 0, second: 0)
+        )
+    }
 
     var body: some View {
-        VStack {
-            DateScrollerView()
-                .environmentObject(dateHolder)
-            dayOfWeekStack
-            calendarGrid
-        }
-    }
-    
-    var dayOfWeekStack: some View {
         HStack {
-            Text("Sun").dayOfWeek()
-            Text("Mon").dayOfWeek()
-            Text("Tue").dayOfWeek()
-            Text("Wed").dayOfWeek()
-            Text("Thu").dayOfWeek()
-            Text("Fri").dayOfWeek()
-            Text("Sat").dayOfWeek()
-        }
-    }
-    
-    var calendarGrid: some View {
-        VStack {
-            let daysInMonth = CalendarHelper().daysInMonth(dateHolder.date)
-            let firstDayOfMonth = CalendarHelper().firstOfMonth(dateHolder.date)
-            let startingSpaces = CalendarHelper().weekDay(firstDayOfMonth)
-            let prevMonth = CalendarHelper().minusMonth(dateHolder.date)
-            let daysInPrevMonth = CalendarHelper().daysInMonth(prevMonth)
-            
-            ForEach(0..<6) {
-                row in
+            ForEach(days, id: \.self) { date in
                 HStack {
-                    ForEach(1..<8) {
-                        column in
-                        let count = column + (row * 7)
-                        CalendarCell(count: count, startingSpaces: startingSpaces, daysInMonth: daysInMonth, daysInPrevMonth: daysInPrevMonth)
-                            .environmentObject(dateHolder)
+                    if self.calendar.isDate(self.week, equalTo: date, toGranularity: .month) {
+                        self.content(date)
+                    } else {
+                        self.content(date).hidden()
                     }
                 }
             }
         }
-        .frame(maxHeight: .infinity)
     }
 }
 
-struct DateScrollerView: View {
-    @EnvironmentObject var dateHolder: DateHolder
+struct MonthView<DateView>: View where DateView: View {
+    @Environment(\.calendar) var calendar
+
+    let month: Date
+    let showHeader: Bool
+    let content: (Date) -> DateView
+
+    init(month: Date, showHeader: Bool = true, @ViewBuilder content: @escaping (Date) -> DateView
+    ) {
+        self.month = month
+        self.content = content
+        self.showHeader = showHeader
+    }
+
+    private var weeks: [Date] {
+        guard let monthInterval = calendar.dateInterval(of: .month, for: month) else { return [] }
+        return calendar.generateDates(inside: monthInterval, matching: DateComponents(hour: 0, minute: 0, second: 0, weekday: calendar.firstWeekday)
+        )
+    }
+
+    private var header: String {
+        let component = calendar.component(.month, from: month)
+        let formatter = component == 1 ? DateFormatter.monthAndYear : .month
+        return formatter.string(from: month)
+    }
 
     var body: some View {
-        HStack {
-            Spacer()
-            Button {
-                previousMonth()
-            } label: {
-                Image(systemName: "arrow.left")
-                    .imageScale(.large)
-            }
-            Text(CalendarHelper().monthYearString(dateHolder.date))
-                .font(.title1)
-                .frame(maxWidth: .infinity)
-            Button {
-                nextMonth()
-            } label: {
-                Image(systemName: "arrow.right")
-                    .imageScale(.large)
+        VStack {
+            if showHeader {
+                HStack {
+                    Rectangle()
+                        .fill(
+                            LinearGradient(colors: [AppColor.purple, AppColor.lightblue], startPoint: .trailing, endPoint: .leading)
+                        )
+                        .frame(maxWidth: 110)
+                        .frame(height: 4)
+                        .frame(minWidth: 10)
+                        .cornerRadius(2, corners: [.topRight, .bottomRight])
+                        .edgesIgnoringSafeArea(.horizontal)
+                    Spacer()
+                    Text(header)
+                        .font(.custom("OpenSans-SemiBold", size: 20))
+                        .layoutPriority(1)
+                        .padding(.horizontal, 12)
+                        .fixedSize(horizontal: false, vertical: true)
+                    Spacer()
+                    Rectangle()
+                        .fill(
+                            LinearGradient(colors: [AppColor.purple, AppColor.lightblue], startPoint: .leading, endPoint: .trailing)
+                        )
+                        .frame(maxWidth: 110)
+                        .frame(height: 4)
+                        .cornerRadius(2, corners: [.topLeft, .bottomLeft])
+                        .edgesIgnoringSafeArea(.horizontal)
+                }
             }
 
-            Spacer()
+            ForEach(weeks, id: \.self) { week in
+                WeekView(week: week, content: self.content)
+            }
         }
     }
-    
-    func previousMonth() {
-        dateHolder.date = CalendarHelper().minusMonth(dateHolder.date)
-    }
-    
-    func nextMonth() {
-        dateHolder.date = CalendarHelper().plusMonth(dateHolder.date)
-    }
 }
 
-class CalendarHelper {
-    let calendar = Calendar.current
-    let dateFormatter = DateFormatter()
-    
-    func monthYearString(_ date: Date) -> String {
-        dateFormatter.dateFormat = "LLL yyyy"
-        return dateFormatter.string(from: date)
-    }
-    
-    func plusMonth(_ date: Date) -> Date {
-        return calendar.date(byAdding: .month, value: 1, to: date)!
-    }
-    
-    func minusMonth(_ date: Date) -> Date {
-        return calendar.date(byAdding: .month, value: -1, to: date)!
-    }
-    
-    func daysInMonth(_ date: Date) -> Int {
-        let range = calendar.range(of: .day, in: .month, for: date)!
-        return range.count
-    }
-    
-    func dayOfMonth(_ date: Date) -> Int {
-        let components = calendar.dateComponents([.day], from: date)
-        return components.day!
-    }
-    
-    func firstOfMonth(_ date: Date) -> Date {
-        let components = calendar.dateComponents([.year, .month], from: date)
-        return calendar.date(from: components)!
-    }
-    
-    func weekDay(_ date: Date) -> Int {
-        let components = calendar.dateComponents([.weekday], from: date)
-        return components.weekday! - 1
-    }
-    
-}
+struct CalendarView<DateView>: View where DateView: View {
+    @Environment(\.calendar) var calendar
 
-class DateHolder: ObservableObject {
-    @Published var date = Date() //today's date
-}
+    let interval: DateInterval
+    let content: (Date) -> DateView
 
-extension Text {
-    func dayOfWeek() -> some View {
-        self.frame(maxWidth: .infinity)
-            .padding(.top, 1)
-            .lineLimit(1)
+    init(interval: DateInterval, @ViewBuilder content: @escaping (Date) -> DateView) {
+        self.interval = interval
+        self.content = content
     }
-}
 
-struct CalendarCell: View {
-    @EnvironmentObject var dateHolder: DateHolder
-    let count: Int
-    var startingSpaces: Int
-    let daysInMonth: Int
-    let daysInPrevMonth: Int
-    
+    private var months: [Date] {
+        calendar.generateDates(inside: interval, matching: DateComponents(day: 1, hour: 0, minute: 0, second: 0)
+        )
+    }
+
     var body: some View {
-        Text(monthStruct().day())
-            .foregroundColor(textColor(type: monthStruct().monthType))
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-    }
-    
-    func textColor(type: MonthType) -> Color {
-        return type == MonthType.current ? AppColor.black : AppColor.lightgrey
-    }
-    
-    func monthStruct() -> MonthStruct {
-        let start = startingSpaces == 0 ? startingSpaces + 7 : startingSpaces
-        if count <= start {
-            let day = daysInPrevMonth + count - startingSpaces
-            return MonthStruct(monthType: MonthType.previous, dayInt: day)
-        } else if count - start > daysInMonth {
-            let day = count - start - daysInMonth
-            return MonthStruct(monthType: MonthType.next, dayInt: day)
+        ScrollView(.vertical, showsIndicators: false) {
+            VStack {
+                ForEach(months, id: \.self) { month in
+                    MonthView(month: month, content: self.content)
+                }
+            }
+            .padding(.vertical, 16)
         }
-        let day = count - start
-        return MonthStruct(monthType: MonthType.current, dayInt: day)
     }
 }
 
-struct MonthStruct {
-    var monthType: MonthType
-    var dayInt: Int
-    func day() -> String {
-        return String(dayInt)
+struct RootView: View {
+    @Environment(\.calendar) var calendar
+    @State var today: String = Date.now.formatted(as: "MMMM dd YYYY")
+    @State var selectedDay: String = Date.now.formatted(as: "MMMM dd YYYY")
+
+    private var year: DateInterval {
+        calendar.dateInterval(of: .year, for: Date())!
+    }
+
+    var body: some View {
+        CalendarView(interval: year) { date in
+            let dateAsString = date.formatted(as: "MMMM dd YYYY")
+            let dayAsString = String(self.calendar.component(.day, from: date))
+            
+            Button {
+                selectedDay = dateAsString
+            } label: {
+                Text(dayAsString)
+                    .font(.custom("OpenSans-SemiBold", size: 20))
+                    .foregroundColor(dateAsString == today ? AppColor.white : AppColor.black)
+                    .frame(width: 44, height: 44)
+                    .overlay {
+                        if dateAsString == today && dateAsString == selectedDay {
+                            ZStack {
+                                Circle()
+                                    .fill(
+                                        LinearGradient(colors: [AppColor.purple, AppColor.lightblue], startPoint: .top, endPoint: .bottom)
+                                    )
+                                    .frame(width: 30, height: 30)
+                                Circle()
+                                    .strokeBorder(LinearGradient(colors: [AppColor.purple, AppColor.lightblue], startPoint: .top, endPoint: .bottom), lineWidth: 4)
+                                Text(dayAsString)
+                                    .font(.custom("OpenSans-SemiBold", size: 20))
+                                    .foregroundColor(AppColor.white)
+                                    .accessibilityHidden(true)
+                            }
+                            .frame(width: 44, height: 44)
+                            
+                        } else if dateAsString == today && dateAsString != selectedDay {
+                            ZStack {
+                                Circle()
+                                    .fill(
+                                        LinearGradient(colors: [AppColor.purple, AppColor.lightblue], startPoint: .top, endPoint: .bottom)
+                                    )
+                                    .frame(width: 44, height: 44)
+                                
+                                Text(dayAsString)
+                                    .font(.custom("OpenSans-SemiBold", size: 20))
+                                    .foregroundColor(AppColor.white)
+                                    .accessibilityHidden(true)
+                            }
+                            
+                        } else if dateAsString == selectedDay && dateAsString != today {
+                            Circle()
+                                .strokeBorder(LinearGradient(colors: [AppColor.purple, AppColor.lightblue], startPoint: .top, endPoint: .bottom), lineWidth: 4)
+                                .frame(width: 44, height: 44)
+                        }
+
+                    }
+                    .padding(.vertical, 4)
+                    .padding(.horizontal, 0)
+            }
+        }
     }
 }
 
-enum MonthType {
-    case previous, current, next
+extension View {
+    func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
+        clipShape( RoundedCorner(radius: radius, corners: corners) )
+    }
+}
+
+struct RoundedCorner: Shape {
+
+    var radius: CGFloat = .infinity
+    var corners: UIRectCorner = .allCorners
+
+    func path(in rect: CGRect) -> Path {
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        return Path(path.cgPath)
+    }
 }
