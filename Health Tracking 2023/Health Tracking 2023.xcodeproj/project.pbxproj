@@ -63,6 +63,7 @@
 		A8A9EE982A82F67600842770 /* ManageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A9EE972A82F67600842770 /* ManageData.swift */; };
 		A8A9EE9A2A82F6A800842770 /* ManageForms.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A9EE992A82F6A800842770 /* ManageForms.swift */; };
 		A8A9EE9C2A82F75600842770 /* NavigationStackHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A9EE9B2A82F75600842770 /* NavigationStackHandler.swift */; };
+		A8A9EE9E2A84360800842770 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8A9EE9D2A84360800842770 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,6 +124,7 @@
 		A8A9EE972A82F67600842770 /* ManageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageData.swift; sourceTree = "<group>"; };
 		A8A9EE992A82F6A800842770 /* ManageForms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageForms.swift; sourceTree = "<group>"; };
 		A8A9EE9B2A82F75600842770 /* NavigationStackHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackHandler.swift; sourceTree = "<group>"; };
+		A8A9EE9D2A84360800842770 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 		A817BB1D2A7EC26D006F33BD = {
 			isa = PBXGroup;
 			children = (
+				A8A9EE9D2A84360800842770 /* Launch Screen.storyboard */,
 				A817BB282A7EC26D006F33BD /* Health Tracking 2023 */,
 				A817BB272A7EC26D006F33BD /* Products */,
 			);
@@ -389,6 +392,7 @@
 				A817BBCB2A7EEE8F006F33BD /* OpenSans_SemiCondensed-SemiBoldItalic.ttf in Resources */,
 				A817BBDD2A7EFBA4006F33BD /* OpenSans-Italic-VariableFont.ttf in Resources */,
 				A817BBB62A7EEE60006F33BD /* OpenSans_Condensed-Bold.ttf in Resources */,
+				A8A9EE9E2A84360800842770 /* Launch Screen.storyboard in Resources */,
 				A817BBD32A7EEEA3006F33BD /* OpenSans-Medium.ttf in Resources */,
 				A817BBCC2A7EEE92006F33BD /* OpenSans-Bold.ttf in Resources */,
 				A817BBDE2A7EFBA4006F33BD /* OpenSans-VariableFont.ttf in Resources */,
@@ -562,7 +566,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Dahlia;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
@@ -594,7 +598,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Dahlia;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;

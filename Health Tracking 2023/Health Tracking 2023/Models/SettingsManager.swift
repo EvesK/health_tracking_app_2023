@@ -20,5 +20,14 @@ class SettingsManager: ObservableObject {
         guard let name = userDefaults.object(forKey: "userName") as? String else {return ""}
         return name
     }
+    
+    func saveScrollCalendar(_ value: Bool) {
+        userDefaults.set(value, forKey: "scrollCalendar")
+    }
+    
+    func loadScrollCalendar() -> Bool {
+        guard let value = userDefaults.object(forKey: "scrollCalendar") as? Bool else {return true}
+        return value
+    }
 }
 

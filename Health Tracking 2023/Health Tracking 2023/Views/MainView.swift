@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct MainView: View {
-//    let dateHolder = DateHolder()
     @State private var showSettings = false
     
     init() {
@@ -19,7 +18,6 @@ struct MainView: View {
         NavigationStack {
             TabView {
                 RootView()
-//                    .environmentObject(dateHolder)
                     .tabItem {
                         Image("CustomCalendar")
                     }

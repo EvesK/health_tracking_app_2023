@@ -5,7 +5,7 @@
 //  Created by Evelyn on 8/6/23.
 //
 
-// calendar code basis credit: https://gist.github.com/mecid/f8859ea4bdbd02cf5d440d58e936faec/9169b0293f709bb1f560de2ca8184ea903fd5116
+// calendar code based off of code from: https://gist.github.com/mecid/f8859ea4bdbd02cf5d440d58e936faec/9169b0293f709bb1f560de2ca8184ea903fd5116
 
 import SwiftUI
 
@@ -182,13 +182,15 @@ struct MonthView<DateView>: View where DateView: View {
 
 struct CalendarView<DateView>: View where DateView: View {
     @Environment(\.calendar) var calendar
-
+    
     let interval: DateInterval
     let content: (Date) -> DateView
+    
+    let settingsManager = SettingsManager.shared
 
     init(interval: DateInterval, @ViewBuilder content: @escaping (Date) -> DateView) {
-        self.interval = interval
-        self.content = content
+            self.interval = interval
+            self.content = content
     }
 
     private var months: [Date] {
@@ -197,13 +199,23 @@ struct CalendarView<DateView>: View where DateView: View {
     }
 
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false) {
-            VStack {
-                ForEach(months, id: \.self) { month in
-                    MonthView(month: month, content: self.content)
+        ScrollViewReader { proxy in
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack {
+                    ForEach(months, id: \.self) { month in
+                        MonthView(month: month, content: self.content)
+                            .id(month.formatted(as: "MMMM"))
+                    }
+                }
+                .padding(.vertical, 16)
+            }
+            .onAppear() {
+                if settingsManager.loadScrollCalendar() {
+                    let currentMonth = Date.now.formatted(as: "MMMM")
+                    proxy.scrollTo(currentMonth, anchor: .center)
+                    settingsManager.saveScrollCalendar(false)
                 }
             }
-            .padding(.vertical, 16)
         }
     }
 }
@@ -213,12 +225,15 @@ struct RootView: View {
     @State var today: String = Date.now.formatted(as: "MMMM dd YYYY")
     @State var selectedDay: String = Date.now.formatted(as: "MMMM dd YYYY")
 
-    private var year: DateInterval {
-        calendar.dateInterval(of: .year, for: Date())!
+    private var yearInterval: DateInterval {
+        let currentDate = Date()
+        let nineMonthsBefore = Calendar.current.date(byAdding: .month, value: -9, to: currentDate)!
+        let threeMonthsAfter = Calendar.current.date(byAdding: .month, value: 3, to: currentDate)!
+        return DateInterval(start: nineMonthsBefore, end: threeMonthsAfter)
     }
 
     var body: some View {
-        CalendarView(interval: year) { date in
+        CalendarView(interval: yearInterval) { date in
             let dateAsString = date.formatted(as: "MMMM dd YYYY")
             let dayAsString = String(self.calendar.component(.day, from: date))
             
@@ -265,7 +280,7 @@ struct RootView: View {
                                 .strokeBorder(LinearGradient(colors: [AppColor.purple, AppColor.lightblue], startPoint: .top, endPoint: .bottom), lineWidth: 4)
                                 .frame(width: 44, height: 44)
                         }
-
+                        
                     }
                     .padding(.vertical, 4)
                     .padding(.horizontal, 0)
