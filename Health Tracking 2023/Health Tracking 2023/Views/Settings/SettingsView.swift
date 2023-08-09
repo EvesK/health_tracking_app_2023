@@ -9,6 +9,10 @@ import SwiftUI
 
 struct SettingsView: View {
     let settingsManager = SettingsManager.shared
+    @State var userName = SettingsManager.shared.loadUserName()
+    
+    @State private var showingDeleteConfirmation = false
+    
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
@@ -34,37 +38,23 @@ struct SettingsView: View {
                                 AppColor.lightgrey
                             )
                         
-                        NavigationLink {
-                            SettingsView_Name()
-                        } label: {
-                            HStack {
-                                Text("Preferred Name")
-                                    .font(.title2)
-                                    .foregroundColor(AppColor.black)
-                                Spacer()
-                                Image(systemName: "chevron.right")
-                                    .resizable()
-                                    .frame(width: 12, height: 20)
-                                    .foregroundColor(AppColor.lightgrey)
-                            }
-                        }
-                        .padding(.horizontal, 16)
-                        .padding(.vertical, 2)
-                        
-                        Divider()
-                            .overlay(
-                                AppColor.lightgrey
-                            )
-                        
-                        Button {
-                            settingsManager.saveUserName("")
-                        } label: {
-                            HStack {
-                                Text("Delete All Information")
-                                    .font(.title2)
-                                    .foregroundColor(AppColor.black)
-                                Spacer()
-                            }
+                        HStack {
+                            Text("Name")
+                                .font(.title2)
+                                .foregroundColor(AppColor.black)
+                            
+                            Spacer()
+                            
+                            TextField("", text: $userName)
+                                .accentColor(AppColor.lightgrey)
+                                .foregroundColor(AppColor.lightgrey)
+                                .font(.title2)
+                                .multilineTextAlignment(.trailing)
+                                .onSubmit {
+                                    if !userName.isEmpty {
+                                        settingsManager.saveUserName(userName)
+                                    }
+                                }
                         }
                         .padding(.horizontal, 16)
                         .padding(.vertical, 2)
@@ -114,18 +104,14 @@ struct SettingsView: View {
                                 AppColor.lightgrey
                             )
                         
-                        NavigationLink {
-                            SettingsView_DeleteData()
+                        Button {
+                            showingDeleteConfirmation = true
                         } label: {
                             HStack {
-                                Text("Delete Data")
+                                Text("Clear All Data")
                                     .font(.title2)
                                     .foregroundColor(AppColor.black)
                                 Spacer()
-                                Image(systemName: "chevron.right")
-                                    .resizable()
-                                    .frame(width: 12, height: 20)
-                                    .foregroundColor(AppColor.lightgrey)
                             }
                         }
                         .padding(.horizontal, 16)
@@ -215,6 +201,15 @@ struct SettingsView: View {
                     }
 
                 }
+            }
+            .alert("Are you sure you want to clear all data?", isPresented: $showingDeleteConfirmation) {
+                Button("Cancel", role: .cancel) {}
+                Button("Clear", role: .destructive) {
+                    //delete all data here
+                    print("all data deleted")
+                }
+            } message: {
+                Text("This action cannot be undone.")
             }
         }
     }

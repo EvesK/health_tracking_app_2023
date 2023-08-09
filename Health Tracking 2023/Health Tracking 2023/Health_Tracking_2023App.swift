@@ -12,6 +12,7 @@ struct Health_Tracking_2023App: App {
     let settingsManager = SettingsManager.shared
     var body: some Scene {
         WindowGroup {
+            let dateHolder = DateHolder()
             if settingsManager.loadUserName().isEmpty {
                 Welcome1()
             } else {
@@ -20,4 +21,3 @@ struct Health_Tracking_2023App: App {
         }
     }
 }
-

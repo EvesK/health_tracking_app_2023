@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
+    let dateHolder = DateHolder()
     @State private var showSettings = false
     
     init() {
@@ -18,6 +19,7 @@ struct MainView: View {
         NavigationStack {
             TabView {
                 CalendarView()
+                    .environmentObject(dateHolder)
                     .tabItem {
                         Image("CustomCalendar")
                     }
@@ -52,6 +54,7 @@ struct MainView: View {
             }
             .navigationTitle("Wednesday April 19")
             .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden()
         }
         .fullScreenCover(isPresented: $showSettings, content: SettingsView.init)
     }
