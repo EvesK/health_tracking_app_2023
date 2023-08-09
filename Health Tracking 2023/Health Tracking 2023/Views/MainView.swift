@@ -10,6 +10,8 @@ import SwiftUI
 struct MainView: View {
     @State private var showSettings = false
     
+    @Environment(\.calendar) var calendar
+    
     init() {
         UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "OpenSans-Regular", size: 16)!, .foregroundColor: UIColor(AppColor.black)]
         }
@@ -17,7 +19,7 @@ struct MainView: View {
     var body: some View {
         NavigationStack {
             TabView {
-                RootView()
+                CalendarRootView()
                     .tabItem {
                         Image("CustomCalendar")
                     }

@@ -29,5 +29,18 @@ class SettingsManager: ObservableObject {
         guard let value = userDefaults.object(forKey: "scrollCalendar") as? Bool else {return true}
         return value
     }
+    
+    func loadNow() -> Date {
+        return Date.now
+    }
+    
+    func saveSelectedDay(_ date: Date) {
+        userDefaults.set(date, forKey: "selectedDay")
+    }
+                         
+    func loadSelectedDay() -> Date {
+        guard let date = userDefaults.object(forKey: "selectedDay") as? Date else {return Date.now}
+        return date
+    }
 }
 

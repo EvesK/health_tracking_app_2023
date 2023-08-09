@@ -8,7 +8,14 @@
 import SwiftUI
 
 struct DetailView: View {
+    @State var selectedDay = SettingsManager.shared.loadSelectedDay().formatted(as: "MMMM dd YYYY")
     var body: some View {
-        Text("Detail")
+        VStack {
+            Text(selectedDay)
+            Text("Detail")
+        }
+        .onAppear() {
+            selectedDay = SettingsManager.shared.loadSelectedDay().formatted(as: "MMMM dd YYYY")
+        }
     }
 }

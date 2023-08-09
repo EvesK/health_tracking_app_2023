@@ -202,10 +202,20 @@ struct CalendarView<DateView>: View where DateView: View {
         ScrollViewReader { proxy in
             ScrollView(.vertical, showsIndicators: false) {
                 VStack {
+                    Text("Dahlia only displays data up to 9 months in the past. Access all your data in Settings.")
+                        .font(.body)
+                        .foregroundColor(AppColor.lightgrey)
+                        .multilineTextAlignment(.center)
+                        .padding(12)
                     ForEach(months, id: \.self) { month in
                         MonthView(month: month, content: self.content)
                             .id(month.formatted(as: "MMMM"))
                     }
+                    Text("Dahlia only displays data up to 3 months in the future. Access all your data in Settings.")
+                        .font(.body)
+                        .foregroundColor(AppColor.lightgrey)
+                        .multilineTextAlignment(.center)
+                        .padding(12)
                 }
                 .padding(.vertical, 16)
             }
@@ -220,10 +230,12 @@ struct CalendarView<DateView>: View where DateView: View {
     }
 }
 
-struct RootView: View {
+struct CalendarRootView: View {
     @Environment(\.calendar) var calendar
-    @State var today: String = Date.now.formatted(as: "MMMM dd YYYY")
-    @State var selectedDay: String = Date.now.formatted(as: "MMMM dd YYYY")
+    @State var today = SettingsManager.shared.loadNow().formatted(as: "MMMM dd YYYY")
+    @State var selectedDay = SettingsManager.shared.loadSelectedDay().formatted(as: "MMMM dd YYYY")
+    
+    let settingsManager = SettingsManager.shared
 
     private var yearInterval: DateInterval {
         let currentDate = Date()
@@ -239,10 +251,11 @@ struct RootView: View {
             
             Button {
                 selectedDay = dateAsString
+                settingsManager.saveSelectedDay(date)
             } label: {
                 Text(dayAsString)
                     .font(.custom("OpenSans-SemiBold", size: 20))
-                    .foregroundColor(dateAsString == today ? AppColor.white : AppColor.black)
+                    .foregroundColor(dateIsInFuture(date: date) ? AppColor.lightgrey : AppColor.black)
                     .frame(width: 44, height: 44)
                     .overlay {
                         if dateAsString == today && dateAsString == selectedDay {
@@ -286,7 +299,14 @@ struct RootView: View {
                     .padding(.horizontal, 0)
             }
         }
+        .onAppear() {
+            selectedDay = SettingsManager.shared.loadSelectedDay().formatted(as: "MMMM dd YYYY")
+        }
     }
+    
+    private func dateIsInFuture(date: Date) -> Bool {
+            return date >= Date.now
+        }
 }
 
 extension View {
