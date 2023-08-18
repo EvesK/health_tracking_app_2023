@@ -268,7 +268,7 @@ struct CalendarRootView: View {
                                 Circle()
                                     .strokeBorder(LinearGradient(colors: [AppColor.purple, AppColor.lightblue], startPoint: .top, endPoint: .bottom), lineWidth: 4)
                                 Text(dayAsString)
-                                    .font(.custom("OpenSans-SemiBold", size: 20))
+                                    .font(.custom("OpenSans-SemiBold", size: 16))
                                     .foregroundColor(AppColor.white)
                                     .accessibilityHidden(true)
                             }

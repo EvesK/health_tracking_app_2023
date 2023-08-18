@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DetailView: View {
     @State var selectedDay = SettingsManager.shared.loadSelectedDay().formatted(as: "MMMM dd YYYY")
+    
     var body: some View {
         VStack {
             Text(selectedDay)

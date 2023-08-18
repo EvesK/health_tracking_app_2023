@@ -49,8 +49,6 @@
 		A817BBD62A7EEEAB006F33BD /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BB9E2A7EEE10006F33BD /* OpenSans-SemiBold.ttf */; };
 		A817BBD72A7EEEAD006F33BD /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BB902A7EEE0F006F33BD /* OpenSans-SemiBoldItalic.ttf */; };
 		A817BBDA2A7EF04E006F33BD /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817BBD92A7EF04E006F33BD /* Fonts.swift */; };
-		A817BBDD2A7EFBA4006F33BD /* OpenSans-Italic-VariableFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BBDB2A7EFBA4006F33BD /* OpenSans-Italic-VariableFont.ttf */; };
-		A817BBDE2A7EFBA4006F33BD /* OpenSans-VariableFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A817BBDC2A7EFBA4006F33BD /* OpenSans-VariableFont.ttf */; };
 		A817BBE02A7EFEEE006F33BD /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817BBDF2A7EFEEE006F33BD /* Components.swift */; };
 		A817BBF22A801EB1006F33BD /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817BBF12A801EB1006F33BD /* CalendarView.swift */; };
 		A817BBF52A807A50006F33BD /* ManageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A817BBF42A807A50006F33BD /* ManageView.swift */; };
@@ -110,8 +108,6 @@
 		A817BBAE2A7EEE11006F33BD /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
 		A817BBAF2A7EEE11006F33BD /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		A817BBD92A7EF04E006F33BD /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
-		A817BBDB2A7EFBA4006F33BD /* OpenSans-Italic-VariableFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Italic-VariableFont.ttf"; path = "../../../../../../../Downloads/Open_Sans/OpenSans-Italic-VariableFont.ttf"; sourceTree = "<group>"; };
-		A817BBDC2A7EFBA4006F33BD /* OpenSans-VariableFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-VariableFont.ttf"; path = "../../../../../../../Downloads/Open_Sans/OpenSans-VariableFont.ttf"; sourceTree = "<group>"; };
 		A817BBDF2A7EFEEE006F33BD /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		A817BBF12A801EB1006F33BD /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		A817BBF42A807A50006F33BD /* ManageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageView.swift; sourceTree = "<group>"; };
@@ -247,8 +243,6 @@
 		A817BB432A7EEDF4006F33BD /* OpenSans */ = {
 			isa = PBXGroup;
 			children = (
-				A817BBDB2A7EFBA4006F33BD /* OpenSans-Italic-VariableFont.ttf */,
-				A817BBDC2A7EFBA4006F33BD /* OpenSans-VariableFont.ttf */,
 				A817BBA32A7EEE10006F33BD /* OpenSans_Condensed-Bold.ttf */,
 				A817BB932A7EEE10006F33BD /* OpenSans_Condensed-BoldItalic.ttf */,
 				A817BBA12A7EEE10006F33BD /* OpenSans_Condensed-ExtraBold.ttf */,
@@ -390,12 +384,10 @@
 				A817BBD72A7EEEAD006F33BD /* OpenSans-SemiBoldItalic.ttf in Resources */,
 				A817BBBD2A7EEE6F006F33BD /* OpenSans_Condensed-Regular.ttf in Resources */,
 				A817BBCB2A7EEE8F006F33BD /* OpenSans_SemiCondensed-SemiBoldItalic.ttf in Resources */,
-				A817BBDD2A7EFBA4006F33BD /* OpenSans-Italic-VariableFont.ttf in Resources */,
 				A817BBB62A7EEE60006F33BD /* OpenSans_Condensed-Bold.ttf in Resources */,
 				A8A9EE9E2A84360800842770 /* Launch Screen.storyboard in Resources */,
 				A817BBD32A7EEEA3006F33BD /* OpenSans-Medium.ttf in Resources */,
 				A817BBCC2A7EEE92006F33BD /* OpenSans-Bold.ttf in Resources */,
-				A817BBDE2A7EFBA4006F33BD /* OpenSans-VariableFont.ttf in Resources */,
 				A817BBC12A7EEE78006F33BD /* OpenSans_SemiCondensed-BoldItalic.ttf in Resources */,
 				A817BBB92A7EEE67006F33BD /* OpenSans_Condensed-Light.ttf in Resources */,
 				A817BBC82A7EEE88006F33BD /* OpenSans_SemiCondensed-MediumItalic.ttf in Resources */,

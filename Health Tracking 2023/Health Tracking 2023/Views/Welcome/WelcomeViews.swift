@@ -11,6 +11,7 @@ struct Welcome1: View {
     let gradient = LinearGradient(gradient: Gradient(colors: [AppColor.purple, AppColor.lightblue]),
                                    startPoint: .leading,
                                    endPoint: .trailing)
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -54,7 +55,7 @@ struct Welcome1: View {
                     
                     Spacer()
                     
-                    RoundNavLink(destination: Welcome2(), label: "Get Started", foregroundColor: AppColor.black, backgroundColor: AppColor.white)
+                    RoundButton(destination: Welcome2(), label: "Get Started", foregroundColor: AppColor.black, backgroundColor: AppColor.white)
                     
                     Spacer()
                         .frame(height: 80)
@@ -538,6 +539,7 @@ struct Welcome5: View {
 }
 
 struct Welcome6: View {
+    
     var body: some View {
         ZStack {
             LinearGradient(colors: [AppColor.purple, AppColor.lightblue], startPoint: .bottom, endPoint: .top)
